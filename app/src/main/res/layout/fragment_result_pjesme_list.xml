@@ -45,7 +45,7 @@
             android:inputType="text"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,7 +57,7 @@
             android:fontFamily="@font/alef"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/my_pjesma" />
 

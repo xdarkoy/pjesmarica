@@ -20,22 +20,24 @@
         android:background="@android:color/transparent"
         app:srcCompat="@drawable/ic_logo" />
 
-    <EditText
-        android:id="@+id/edSearch"
-        style="@style/Widget.AppCompat.EditText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearch"
         android:layout_width="328dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:background="@android:drawable/edit_text"
-        android:ems="10"
         android:hint="@string/pretragaPlaceHolder"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgSearchLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/imgSearchLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Switch
         android:id="@+id/swPretraga"
@@ -62,20 +64,17 @@
         app:layout_constraintBottom_toTopOf="@+id/edSearch"
         app:layout_constraintStart_toEndOf="@+id/swPretraga" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cmdTrazi"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:width="160dp"
-        android:background="@drawable/bt_search"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/button_search"
         android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edSearch" />
 
