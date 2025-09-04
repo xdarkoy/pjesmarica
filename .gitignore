@@ -8,3 +8,6 @@
 # IDE
 /.idea/
 *.iml
+
+# Lokale Pfade
+/local.properties
