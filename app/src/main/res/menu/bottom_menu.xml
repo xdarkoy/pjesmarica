@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_search"
+        android:enabled="true"
+        android:title="@string/mnuPretraga" />
+    <item
+        android:id="@+id/navigation_favoriti"
+        android:icon="@drawable/ic_favorit"
+        android:enabled="true"
+        android:title="@string/mnuFavoriti" />
+    <item
+        android:id="@+id/navigation_mojepjesme"
+        android:icon="@drawable/ic_my"
+        android:title="@string/mnuMojePjesme" />
+    <item
+        android:id="@+id/navigation_postavke"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/mnuPostavke" />
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/ic_info"
+        android:title="@string/mnuInfo" />
+
+</menu>

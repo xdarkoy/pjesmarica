@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_search">
+
+    <!-- SEARCH -->
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.SearchFragment"
+        android:label="@string/frag_search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_navigation_izvodjaci_result"
+            app:destination="@id/navigation_result_izvodjaci" />
+
+        <action
+            android:id="@+id/action_navigation_pjesme_result"
+            app:destination="@id/navigation_result_pjesme" />
+
+        <action
+            android:id="@+id/action_search_to_info"
+            app:destination="@id/navigation_info" />
+    </fragment>
+
+    <!-- FAVORITI -->
+    <fragment
+        android:id="@+id/navigation_favoriti"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.FavItemFragment"
+        android:label="@string/frag_favoriti"
+        tools:layout="@layout/fragment_favoriti">
+
+        <action
+            android:id="@+id/action_favoriti_to_detail"
+            app:destination="@id/navigation_detail"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <!-- MOJE PJESME -->
+    <fragment
+        android:id="@+id/navigation_mojepjesme"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.MyItemFragment"
+        android:label="@string/frag_my"
+        tools:layout="@layout/fragment_my">
+
+        <action
+            android:id="@+id/action_my_to_edit"
+            app:destination="@id/navigation_edit" />
+
+        <action
+            android:id="@+id/action_mojepjesme_to_detail"
+            app:destination="@id/navigation_detail"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <!-- POSTAVKE -->
+    <fragment
+        android:id="@+id/navigation_postavke"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.SettingsFragment"
+        android:label="@string/frag_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <!-- INFO -->
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.InfoFragment"
+        android:label="@string/frag_info"
+        tools:layout="@layout/fragment_info" />
+
+    <!-- EDIT -->
+    <fragment
+        android:id="@+id/navigation_edit"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.EditFragment"
+        android:label="@string/frag_edit"
+        tools:layout="@layout/fragment_edit">
+
+        <!-- Long-Arg mit Sentinel -1L -->
+        <argument
+            android:name="songId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+        <action
+            android:id="@+id/action_edit_to_mojepjesme"
+            app:destination="@id/navigation_mojepjesme" />
+    </fragment>
+
+    <!-- REZULTATI: IZVOĐAČI -->
+    <fragment
+        android:id="@+id/navigation_result_izvodjaci"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.ResultIzvodjaciFragment"
+        android:label="@string/frag_result"
+        tools:layout="@layout/fragment_result_izvodjaci">
+
+        <argument
+            android:name="query"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <action
+            android:id="@+id/action_navigation_result_izvodjaci_to_navigation_search"
+            app:destination="@id/navigation_search" />
+
+        <action
+            android:id="@+id/action_result_izvodjaci_to_result_pjesme"
+            app:destination="@id/navigation_result_pjesme" />
+    </fragment>
+
+    <!-- REZULTATI: PJESME -->
+    <fragment
+        android:id="@+id/navigation_result_pjesme"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.ResultPjesmeFragment"
+        android:label="@string/frag_result"
+        tools:layout="@layout/fragment_result_pjesme">
+
+        <argument
+            android:name="query"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <!-- Long-Arg mit Sentinel -1L -->
+        <argument
+            android:name="artistId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+        <action
+            android:id="@+id/action_result_to_detail"
+            app:destination="@id/navigation_detail" />
+
+        <action
+            android:id="@+id/action_navigation_result_pjesme_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
+    <!-- DETAIL -->
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.dsinet.pjesmaricapro.fragmenti.DetailFragment"
+        android:label="@string/frag_detail"
+        tools:layout="@layout/fragment_detail">
+
+        <!-- Long-Arg mit Sentinel -1L -->
+        <argument
+            android:name="songId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <action
+            android:id="@+id/action_navigation_detail_to_navigation_result_pjesme"
+            app:destination="@id/navigation_result_pjesme" />
+    </fragment>
+
+</navigation>

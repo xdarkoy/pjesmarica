@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dsColor">#FF009549</color>
+    <color name="dsblue">#27a9e1</color>
+    <color name="dsred">#be1e2d</color>
+    <color name="dsorange">#fbaf3f</color>
+    <color name="dsredlight">#ed1c24</color>
+    <color name="purple_200">#009549</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- zusätzliche Farben für BottomNav -->
+    <color name="bottom_nav_unselected">#80FFFFFF</color> <!-- halbtransparent weiß -->
+    <color name="bottom_nav_ripple">#30FFFFFF</color>     <!-- dezenter Ripple (Alpha) -->
+    <color name="black_overlay">#66000000</color>
+</resources>

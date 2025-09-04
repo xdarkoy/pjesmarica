@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        // eine davon wählen – beide passen zu Gradle 8.7 + JDK 17
+        id("com.android.application") version "8.12.1"
+        id("com.android.library")    version "8.12.1"
+
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Pjesmarica"
+include(":app")

@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Pjesmarica</string>
+    <string name="title_activity_splash">Pjesmarica</string>
+    <string name="Logo" />
+    <string name="Titel">PJESMARICA</string>
+
+    <!-- Suche -->
+    <string name="title_activity_search">Pretraga</string>
+    <string name="button_search">Traži</string>
+    <string name="swOff">Pretraga pjesama</string>
+    <string name="swOn">Pretraga izvođača</string>
+    <string name="pretragaPlaceHolder">...</string>
+
+    <!-- Menü -->
+    <string name="mnuPretraga">Pretraga</string>
+    <string name="mnuFavoriti">Favoriti</string>
+    <string name="mnuMojePjesme">Moje</string>
+    <string name="mnuPostavke">Postavke</string>
+    <string name="mnuInfo">Info</string>
+
+    <!-- Allgemein -->
+    <string name="lblCounter">Broj pjesama:</string>
+    <string name="Cekanje">Trenutak...</string>
+    <string name="Upit">Da li ste sigurni?</string>
+    <string name="Da">Da</string>
+    <string name="Ne">Ne</string>
+    <string name="Dodaj">Dodaj</string>
+    <string name="Izmjena">Izmjena</string>
+
+    <!-- Einstellungen -->
+    <string name="BojaPozadine">Boja pozadine aplikacije</string>
+    <string name="BojaPjesmarnika">Boja pozadine pjesmarnika</string>
+    <string name="BojaFontaPjesmarnika">Boja fonta na pjesmarniku</string>
+
+    <!-- Lizenz -->
+    <string name="Pro">Pro verzija</string>
+    <string name="Kako">Kako kupiti licencu?</string>
+    <string name="Uplata">1. Uplatite putem PayPala na:</string>
+    <string name="Adresa">Adresa: paypal@algebron.de</string>
+    <string name="Opis">Opis:</string>
+
+    <!-- Info -->
+    <string name="Opce">Opće informacije</string>
+    <string name="Verzija">Verzija:</string>
+    <string name="privacy_policy">https://docs.google.com/document/d/1GMQ3-y-FqOnVvhe7yGEkz9xSgFcdGe62wcH5tYma4ng/edit?usp=sharing</string>
+
+
+    <!-- Fehler -->
+    <string name="Greska">Greška!</string>
+    <string name="TrazeniPojam">Traženi pojam ne može biti manji od 3 znaka!</string>
+    <string name="LicenciranjeNeuspjesno">Licenciranje nije uspjelo!</string>
+    <string name="Prazno">Polje mora sadržavati odgovarajuću vrijednost!</string>
+    <string name="UnknownError">Došlo je do greške.</string>
+
+    <!-- Lizenzstatus -->
+    <string name="Licenciran">Licenciran</string>
+    <string name="Nelicenciran">Nelicenciran</string>
+    <string name="NemaLicence">Aplikacija nije licencirana, te je ograničena!</string>
+
+    <!-- Fragmenttitel -->
+    <string name="frag_search">Pretraga</string>
+    <string name="frag_favoriti">Favoriti</string>
+    <string name="frag_my">Moje pjesme</string>
+    <string name="frag_settings">Postavke</string>
+    <string name="frag_info">Informacije</string>
+    <string name="frag_result">Rezultati</string>
+    <string name="frag_detail">Pjesma</string>
+    <string name="frag_edit">Dodaj/Izmjena</string>
+
+    <!-- Farben Pjesmarnik (Toasts) -->
+    <string name="pjesmarnik_white">Boja pjesmarnika: Bijela</string>
+    <string name="pjesmarnik_green">Boja pjesmarnika: Zelena</string>
+    <string name="pjesmarnik_orange">Boja pjesmarnika: Narandžasta</string>
+
+    <!-- Farben Font (Toasts) -->
+    <string name="font_black">Boja fonta: Crna</string>
+    <string name="font_red">Boja fonta: Crvena</string>
+    <string name="font_white">Boja fonta: Bijela</string>
+
+</resources>

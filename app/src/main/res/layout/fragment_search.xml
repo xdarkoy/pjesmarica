@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmenti.SearchFragment"
+    android:background="@color/dsColor">
+
+    <ImageView
+        android:id="@+id/imgSearchLogo"
+        android:layout_width="161dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <EditText
+        android:id="@+id/edSearch"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="120dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="@string/pretragaPlaceHolder"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSearchLogo" />
+
+    <Switch
+        android:id="@+id/swPretraga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="20dp"
+        android:checked="false"
+        app:layout_constraintBottom_toTopOf="@+id/edSearch"
+        app:layout_constraintStart_toStartOf="@+id/edSearch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/txSwitchOpis"
+        android:layout_width="250dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:text="@string/swOff"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/edSearch"
+        app:layout_constraintStart_toEndOf="@+id/swPretraga" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cmdTrazi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:width="160dp"
+        android:background="@drawable/bt_search"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/button_search"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch" />
+
+    <TextView
+        android:id="@+id/txCounterCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/lblCounter"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

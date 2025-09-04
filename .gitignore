@@ -1,0 +1,10 @@
+﻿# Android build
+/**/build/
+/app/debug/
+/app/release/
+*.apk
+*.aab
+
+# IDE
+/.idea/
+*.iml

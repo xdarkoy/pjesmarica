@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace = 'com.dsinet.pjesmaricapro'
+
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.dsinet.pjesmaricapro"
+        minSdk = 21                 // nicht anheben, sonst verlierst du ältere Geräte
+        targetSdk = 35
+
+        versionCode = 5             // bei jedem Release erhöhen!
+        versionName = "4.2"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            debuggable = true
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+        }
+        release {
+            // Für Play-Release sinnvoll:
+            minifyEnabled = true
+            shrinkResources = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+            // Für echte Veröffentlichungen verwende deinen Upload-Key (nicht debug):
+            // signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        // falls du Java-API < 26 nutzt:
+        // coreLibraryDesugaringEnabled = true
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+
+    // Eigene zusätzliche Java-Quellenordner
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java/Db']
+        }
+    }
+
+    // Nicht nötig zu setzen; AGP wählt selbst die passende Version
+    // buildToolsVersion = '34.0.0'
+}
+
+// Java-Compiler: Warnungen zu deprecated APIs sichtbar machen
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += ['-Xlint:deprecation', '-Xlint:unchecked']
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation "androidx.core:core:1.13.1"
+    implementation "androidx.core:core-ktx:1.13.1"
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.preference:preference:1.2.1'
+
+    // Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.9.2'
+    implementation 'androidx.lifecycle:lifecycle-process:2.9.2'
+
+    // App Startup
+    implementation 'androidx.startup:startup-runtime:1.2.0'
+
+    // Navigation (Fragment + UI)
+    implementation 'androidx.navigation:navigation-fragment:2.9.3'
+    implementation 'androidx.navigation:navigation-ui:2.9.3'
+
+    // Alte Support-APIs (nur falls nötig)
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Tests
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+}

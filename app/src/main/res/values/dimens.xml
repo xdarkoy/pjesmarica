@@ -1,0 +1,8 @@
+<!-- res/values/dimens.xml -->
+<resources>
+    <!-- übliche Höhe für BottomNavigation: 56dp (Material Guideline). -->
+    <dimen name="menuHeight">56dp</dimen>
+
+    <!-- Icon-Größe: 24dp oder 32dp sind üblich (80dp ist extrem groß). -->
+    <dimen name="menuIcons">24dp</dimen>
+</resources>
